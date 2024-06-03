@@ -8,7 +8,7 @@ app.engine('hbs', handlebars.engine({
 }));
 
 app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname,'views'))
+app.set('views', path.resolve('src/views'));
 
 
     return app;
