@@ -1,4 +1,5 @@
 const movies = [{
+id: 1,
 title: 'Jungle Cuise',     
 genre: 'Adventure',
 director: 'John',
@@ -14,6 +15,8 @@ description: 'Description: Dreaming about saving countless lives and having anot
   };
 
 exports.create = (movieData) => {
+    
+    movieData._id = movies[movies.length - 1]._id;
    
     movies.push(movieData);
     
