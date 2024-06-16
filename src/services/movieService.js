@@ -1,3 +1,6 @@
+const Movie = require('../models/Movie');
+
+
 const movies = [{
 id: 1,
 title: 'Jungle Cuise',     
@@ -40,10 +43,10 @@ description: 'Description: Dreaming about saving countless lives and having anot
     return movie;
   }
 
-exports.create = (movieData) => {
-    
-    movieData._id = movies[movies.length - 1]._id;
-   
-    movies.push(movieData);
+exports.create = async (movieData) => {
+  const result = await Movie.create(movieData);
+
+  return result;
+  
     
 }
