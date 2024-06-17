@@ -5,4 +5,11 @@ router.get('/create', (req,res) => {
 
 });
 
+router.post('/create', (req,res) => {
+    const castData = req.body;
+    
+
+    res.redirect('/')
+});
+
 module.exports = router;
