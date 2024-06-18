@@ -6,7 +6,7 @@ const castController = require('./controllers/castController');
 
 router.use(movieController);
 router.use(homeController);
-router.use('/cast',castController);
+router.use('/cast', castController);
 
 router.get('*', (req, res) => {
     res.redirect('/404')
