@@ -1,5 +1,5 @@
 const router = require('express').Router();
-
+const authService = require('../services/authService')
 const userService = require('../services/authService')
 
 router.get('/register', (req, res) => {
@@ -7,9 +7,9 @@ router.get('/register', (req, res) => {
 
 });
 
-router.post('register', async (req, res) => {
+router.post('/register', async (req, res) => {
 const userData = req.body;
-await authService.registe(userData);
+await authService.register(userData);
 console.log(userData);
 
 
