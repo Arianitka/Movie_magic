@@ -30,6 +30,13 @@ const Movie = require('../models/Movie');
   
   exports.getOne = (movieId) =>  Movie.findById(movieId);
   
+  exports.create = (movieData) => Movie.create(movieData);
+  
+  exports.attach = async (movieId, castId) => {
+    const movie = await this.getOne(movieId);
 
-exports.create = (movieData) => Movie.create(movieData);
+    movie.casts.push(castId);
+
+    return movie.save();
+  }
 

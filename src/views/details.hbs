@@ -23,9 +23,29 @@
                         </div>
                     </div>
                     <div class="card_right">
-                        <img src="{{imageUrl}}"
-                            alt="image">
+                        <img src="{{movie.imageUrl}}" alt="image">
                     </div>
+                                        
+                </div>
+                
+                    <div class="main-cast-card">
+                        {{#each casts}}
+                    <div class="cast-card">
+                        <div class="card-img">
+                            <img src="{{castImage}}" alt="cast">
+                        </div>
+                        <div class="cast-info">
+                            <h1>{{name}}</h1>
+                            <h3>{{age}}<h3>
+                            <h3>{{born}}</h3>
+                            <h3>{{nameInMovie}}</h3>
+                        </div>
+                    </div>
+                    {{else}}
+                    <h2>No casts created</h2>
+                    {{/each}}
+
+                    
                 </div>
 
             </section>
