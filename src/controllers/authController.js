@@ -14,6 +14,10 @@ console.log(userData);
 
 
 res.redirect('/auth/login');
+});
+
+router.get('/login', (req, res) => {
+    res.render('auth/login')
 })
 
 
