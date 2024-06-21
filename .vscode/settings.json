@@ -1,0 +1,12 @@
+{
+    "folder-color.pathColors": [
+        {
+            "folderPath": "Movie_magic\\src\\models\\",
+            "badge": "🍀"
+        },
+        {
+            "folderPath": "Movie_magic\\src\\config\\",
+            "color": "foldercolorizer.green"
+        }
+    ]
+}
